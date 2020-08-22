@@ -20,6 +20,8 @@ import { AmbientSound } from './modules/ambientSound'
 import { addZenquencer } from './zenquencer/zenquencerBuilder'
 import { createEventsBoard } from './modules/eventBoard'
 import { addOneTimeTrigger } from './modules/Utils'
+import { getUserData } from '@decentraland/Identity'
+import Meta from '../metas/sammich/sammich';
 
 //////// LOG PLAYER POSITION
 
@@ -120,3 +122,19 @@ let forest2 = new AmbientSound(
 //   true,
 //   0.2
 // )
+
+const landOwnerData = {
+  host_data: `{
+    "sammich":{
+      "position":{"x":${9*16},"y":0.8,"z":${9*16}},
+      "rotation":{"x":0,"y":0,"z":0},
+      "scale":{"x":2, "y":2, "z":2},
+      "hideFrame":false,
+      "hideBoard":false,
+      "hideAd":true,
+      "gameID":"0,0"
+    }
+ }`
+};
+
+new Meta({getUserData}, landOwnerData)

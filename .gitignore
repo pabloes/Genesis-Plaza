@@ -114,3 +114,4 @@ server/functions/keys/
 
 ## compiled scene
 bin
+.DS_Store
