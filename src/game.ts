@@ -126,15 +126,26 @@ let forest2 = new AmbientSound(
 const landOwnerData = {
   host_data: `{
     "sammich":{
-      "position":{"x":${9*16},"y":0.8,"z":${9*16}},
-      "rotation":{"x":0,"y":0,"z":0},
-      "scale":{"x":2, "y":2, "z":2},
-      "hideFrame":false,
-      "hideBoard":false,
-      "hideAd":true,
-      "gameID":"0,0"
+      "position":{"x":${9*16-11},"y":1.2,"z":${9*16+8}},
+      "rotation":{"x":0,"y":270,"z":0},
+      "scale":{"x":1.5, "y":1.5, "z":1},     
+      "hideBoard": false,
+      "hideAd": true,
+      "gameID": "-95,-87",
+      "soundDistance": 12,
+      "showScenario": false,
+      "hideFrame": false,
+      "showJoinVoice": false,
+      "voiceChannel": "dcl-sammich-game",
+      "ws": "wss://foo.mana-fever.fun",
+      "http": "https://foo.mana-fever.fun"
     }
  }`
 };
+/* 
+Input.instance.subscribe("BUTTON_DOWN", ActionButton.ANY, false, ()=>{
+  const {x,y,z} = Camera.instance.position;
+  console.log( {x,y,z} );
+})); */
 
 new Meta({getUserData}, landOwnerData)
