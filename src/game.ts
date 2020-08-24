@@ -126,7 +126,7 @@ let forest2 = new AmbientSound(
 const landOwnerData = {
   host_data: `{
     "sammich":{
-      "position":{"x":${9*16-11},"y":1.2,"z":${9*16+8}},
+      "position":{"x":${9*16-11},"y":1.7,"z":${9*16+8}},
       "rotation":{"x":0,"y":270,"z":0},
       "scale":{"x":1.5, "y":1.5, "z":1},     
       "hideBoard": false,
