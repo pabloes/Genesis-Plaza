@@ -123,25 +123,36 @@ let forest2 = new AmbientSound(
 //   0.2
 // )
 
+/***
+ * SAMMICH-GAME CODE BELLOW
+ */
 const landOwnerData = {
   host_data: `{
     "sammich":{
-      "position":{"x":${9*16-11},"y":1.7,"z":${9*16+8}},
+      "position":{"x":${9*16-11},"y":1,"z":${9*16+8}},
       "rotation":{"x":0,"y":270,"z":0},
-      "scale":{"x":1.5, "y":1.5, "z":1},     
+      "scale":{"x":1, "y":1, "z":1},     
       "hideBoard": false,
       "hideAd": true,
       "gameID": "-95,-87",
       "soundDistance": 12,
       "showScenario": false,
-      "hideFrame": false,
+      "hideFrame": true,
       "showJoinVoice": false,
       "voiceChannel": "dcl-sammich-game",
-      "ws": "wss://foo.mana-fever.fun",
-      "http": "https://foo.mana-fever.fun"
+      "serverWs": "wss://foo.mana-fever.fun",
+      "serverHttp": "https://foo.mana-fever.fun"
     }
  }`
 };
+const sammichFrame = new Entity();
+sammichFrame.addComponent(new GLTFShape("models/sammich-screen.glb"));
+sammichFrame.addComponent(new Transform({
+  position:new Vector3(9*16-11, 0.5, 9*16+8),
+  rotation:Quaternion.Euler(0,90,0)
+}));
+engine.addEntity(sammichFrame);
+
 /* 
 Input.instance.subscribe("BUTTON_DOWN", ActionButton.ANY, false, ()=>{
   const {x,y,z} = Camera.instance.position;
