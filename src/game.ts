@@ -134,8 +134,8 @@ const landOwnerData = {
       "scale":{"x":1.2, "y":1.05, "z":1},     
       "hideBoard": false,
       "hideAd": true,
-      "gameID": "-95,-87",
-      "soundDistance": 5,
+      "gameID": "0,0",
+      "soundDistance": 16,
       "showScenario": false,
       "hideFrame": true,
       "showJoinVoice": false,
@@ -162,4 +162,4 @@ Input.instance.subscribe("BUTTON_DOWN", ActionButton.ANY, false, ()=>{
   console.log( {x,y,z} );
 })); */
 
-new Meta({getUserData}, landOwnerData)
+engine.addSystem(new Meta({getUserData}, landOwnerData))
