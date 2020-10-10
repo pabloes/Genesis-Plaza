@@ -21,6 +21,8 @@ import { addZenquencer } from './zenquencer/zenquencerBuilder'
 import { createEventsBoard } from './modules/eventBoard'
 import { addOneTimeTrigger } from './modules/Utils'
 import { getUserData } from '@decentraland/Identity'
+import { getCurrentRealm } from "@decentraland/EnvironmentAPI"
+
 import Meta from '../metas/sammich/sammich';
 
 //////// LOG PLAYER POSITION
@@ -162,4 +164,4 @@ Input.instance.subscribe("BUTTON_DOWN", ActionButton.ANY, false, ()=>{
   console.log( {x,y,z} );
 })); */
 
-engine.addSystem(new Meta({getUserData}, landOwnerData))
+engine.addSystem(new Meta({getUserData, getCurrentRealm}, landOwnerData))
