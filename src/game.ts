@@ -142,8 +142,8 @@ const landOwnerData = {
       "hideFrame": true,
       "showJoinVoice": false,
       "voiceChannel": "dcl-sammich-game",
-      "serverWs": "wss://foo.mana-fever.fun",
-      "serverHttp": "https://foo.mana-fever.fun"
+      "serverWs": "wss://mana-fever.com",
+      "serverHttp": "https://mana-fever.com"
     }
  }`
 };
